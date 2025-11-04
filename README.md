@@ -4,6 +4,62 @@ This project is an end-to-end **Customer Shopping Analysis** transforming raw re
 
 ---
 
+
+
+---
+
+## 📊 Project Overview
+
+The goal of this project is to simulate a **corporate-grade, end-to-end data analytics workflow**, demonstrating the ability to translate raw data into **strategic business intelligence** by:
+
+✅ **Data Preparation, Modeling & Exploratory Data Analysis (Python):** Clean and transform the raw dataset for analysis.
+
+✅ **Data Analysis (SQL):** Run analytical business queries to extract insights on customer segments, loyalty, and purchase drivers.
+
+✅ **Visualization & Insights (Power BI):** Interactive dashboard highlighting key patterns and trends for data-driven decision-making.
+
+✅ **Report & Presentation:** Communicate insights and recommendations in a business-focused manner.
+
+---
+
+## 🛠️ How to Use This Project
+
+### ✅ Clone the Repository
+
+```bash
+git clone https://github.com/InfiniteLoop360/Customer_Behavior_Analysis.git
+cd customer-trends-data-analysis-SQL-Python-PowerBI
+```
+
+### ✅ Run the Notebook — `Customer_Shopping_Behavior_Analysis.ipynb`
+
+This notebook includes:
+
+* 📥 Data Import
+* 🔍 Data Exploration (EDA)
+* 🧹 Data Cleaning & Feature Engineering
+* 🔗 SQL Database Connection (PostgreSQL / MySQL / MS SQL Server)
+* ⬆️ Loading Clean Data into SQL Database
+
+### ✅ SQL Analysis
+
+* Create database in SQL Server
+* Run Python code (from notebook) to populate the database
+* Execute queries in **customer_behavior_sql_queries.sql** to answer business questions
+
+### ✅ Power BI Dashboard
+
+* Connect Power BI to SQL Database
+* Open: `customer_behavior_dashboard.pbix`
+* Explore interactive visual insights
+
+### ✅ Reporting & Presentation
+
+* Prepare a **business report** summarizing findings
+* Create a **presentation deck** using Power BI screenshots & business impact (optionally using **Gamma AI**)
+---
+
+
 ## 📊 Dashboard Showcase
 
 The final deliverable is an **interactive Power BI dashboard** that allows business teams to:
