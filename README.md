@@ -128,8 +128,7 @@ GROUP BY gender;
 ```sql
 SELECT customer_id, purchase_amount
 FROM customer
-WHERE discount_applied = 'Yes'
-  AND purchase_amount >= (SELECT AVG(purchase_amount) FROM customer);
+WHERE discount_applied = 'Yes' AND purchase_amount >= (SELECT AVG(purchase_amount) FROM customer);
 ```
 <img width="424" height="393" alt="Q2 (High-Value Discount Users)" src="https://github.com/user-attachments/assets/c576a0ba-3514-4dd1-8bef-e67107e629c1" />
 
@@ -137,8 +136,7 @@ WHERE discount_applied = 'Yes'
 #### ✅ Q3 — Top 5 Products by Highest Avg Review Rating
 
 ```sql
-SELECT item_purchased,
-       ROUND(AVG(review_rating::numeric),2) AS "Average Product Rating"
+SELECT item_purchased, ROUND(AVG(review_rating::numeric),2) AS "Average Product Rating"
 FROM customer
 GROUP BY item_purchased
 ORDER BY AVG(review_rating) DESC
@@ -151,7 +149,7 @@ LIMIT 5;
 
 ```sql
 SELECT shipping_type,
-       ROUND(AVG(purchase_amount),2)
+ROUND(AVG(purchase_amount),2)
 FROM customer
 WHERE shipping_type IN ('Standard','Express')
 GROUP BY shipping_type;
@@ -177,8 +175,7 @@ ORDER BY total_revenue, avg_spend DESC;
 
 ```sql
 SELECT item_purchased,
-       ROUND(100.0 * SUM(CASE WHEN discount_applied = 'Yes' THEN 1 ELSE 0 END) / COUNT(*),2)
-       AS discount_rate
+       ROUND(100.0 * SUM(CASE WHEN discount_applied = 'Yes' THEN 1 ELSE 0 END) / COUNT(*),2) AS discount_rate
 FROM customer
 GROUP BY item_purchased
 ORDER BY discount_rate DESC
@@ -191,16 +188,16 @@ LIMIT 5;
 
 ```sql
 WITH customer_type AS (
-    SELECT customer_id, previous_purchases,
-           CASE 
-               WHEN previous_purchases = 1 THEN 'New'
-               WHEN previous_purchases BETWEEN 2 AND 10 THEN 'Returning'
-               ELSE 'Loyal'
-           END AS customer_segment
-    FROM customer
+SELECT customer_id, previous_purchases,
+CASE 
+    WHEN previous_purchases = 1 THEN 'New'
+    WHEN previous_purchases BETWEEN 2 AND 10 THEN 'Returning'
+    ELSE 'Loyal'
+    END AS customer_segment
+FROM customer
 )
-SELECT customer_segment,
-       COUNT(*) AS "Number of Customers"
+
+SELECT customer_segment, COUNT(*) AS "Number of Customers"
 FROM customer_type
 GROUP BY customer_segment;
 ```
