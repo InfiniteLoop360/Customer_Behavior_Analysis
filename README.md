@@ -17,6 +17,8 @@ The goal of this project is to simulate a **corporate-grade, end-to-end data ana
 
 ✅ **Report & Presentation:** Communicate insights and recommendations in a business-focused manner.
 
+<img width="4872" height="2656" alt="image" src="https://github.com/user-attachments/assets/ec9aa909-b6ba-42e2-8f86-af4bec7df255" />
+
 ---
 
 ## 🛠️ How to Use This Project
