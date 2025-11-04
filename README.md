@@ -59,7 +59,13 @@ Key transformations performed:
 
 10 business-driven queries executed to uncover trends, revenue patterns & customer behavior.
 
----
+### ✅ Q1. Revenue by Gender  
+```sql
+SELECT gender, SUM(purchase_amount) AS revenue
+FROM customer
+GROUP BY gender;
+```
+<img width="240" height="114" alt="Q1 (Revenue by Gender)" src="https://github.com/user-attachments/assets/b180e558-f2fa-47fa-ad43-e11b6658882e" />
 
 ### 📊 3️⃣ Data Visualization (Power BI)
 
