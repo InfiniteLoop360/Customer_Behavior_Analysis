@@ -1,4 +1,4 @@
-# Customer Shopping Analysis
+# Customer Shopping Behavior Analysis
 
 This project is an end-to-end **Customer Shopping Analysis** transforming raw retail data into **actionable business insights** through Python-based data cleaning, SQL analytics, and an interactive Power BI dashboard.
 
